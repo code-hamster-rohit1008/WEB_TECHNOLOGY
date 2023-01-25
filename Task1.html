@@ -1,51 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Task 1</title>
 	<meta charset="utf-8">
-	<meta http-equiv="refresh" content="1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Task 1
+	</title>
 	<style type="text/css">
-		div{
-			width: 30%;
-		}
-		div .even{
-			background-color: rgb(83,193,230);
-			
+		#heading2{
+			display: none;
 		}
 	</style>
 </head>
 <body>
-	<ul>
-		<div>
-		<li class="even">
-			Eswatini
-		</li>
-		</div>
-		<div>
-		<li class="odd">
-			Ecuador
-		</li>
-		</div>
-		<div>
-		<li class="even">
-			Tanzania
-		</li>
-		</div>
-		<li class="odd">
-			Spain
-		</li>
-	    </div>
-		<div>
-
-		<li class="even">
-			Slovakia
-		</li>
-		</div>
-		<div>
-		<li class="odd">
-			Iraq
-		</li>
-		</div>
-	</ul>
+<h1 id="heading">
+	I am heading by HTML
+</h1>
+<button id="Button" onclick="changeMethod('heading','heading2')">
+	Click Here
+</button>
+<h1 id="heading2">
+	I am heading by JS
+</h1>
+<script type="text/javascript">
+	function changeMethod(id1,id2){
+		document.getElementById(id1).style.backgroundColor = "lightblue";
+		document.getElementById(id1).innerHTML = document.getElementById(id2).innerHTML;
+	}
+</script>
 </body>
 </html>
