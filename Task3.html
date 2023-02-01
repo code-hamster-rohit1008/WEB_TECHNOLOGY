@@ -1,27 +1,29 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		Task 3
 	</title>
 </head>
 <body>
-<h1 class="heading">
-	I am heading by HTML
-</h1>
-<button id="Button" onclick="changeMethod('.heading')">
-	Click Here
-</button>
-<script type="text/javascript">
-	function changeMethod(id1){
-		alert('backgroundColor is getting changed for' + id1);
-		document.body.querySelector(id1).style.backgroundColor = "lightblue";
-		alert('backgroundColor is now changed for' + id1);
-	}
-	
-</script>
+	<p>
+	</p>
+	<button onclick="changeLevel()">
+		Update List
+	</button>
+	<script type="text/javascript">
+		var i = 0;var j = 20;
+		function changeLevel(){
+			i = i+1;
+			var temp = document.querySelector("p");
+			let listItem = document.createElement("li");
+			let orderedList = document.createElement("ol");
+			listItem.innerText = "This is level "+i+".";
+			listItem.style.fontSize = j+"px";
+			orderedList.appendChild(listItem);
+			temp.appendChild(orderedList);
+			j = j+10;
+		}
+	</script>
 </body>
 </html>

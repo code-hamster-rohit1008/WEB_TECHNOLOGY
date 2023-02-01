@@ -1,36 +1,27 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>
 		Task 2
 	</title>
-	<style type="text/css">
-		#heading2{
-			display: none;
-		}
-	</style>
 </head>
 <body>
-<h1 id="heading">
-	I am heading by HTML
-</h1>
-<button id="Button" onclick="changeMethod('heading','heading2')">
-	Click Me
-</button>
-<h1 id="heading2">
-	I am heading by JS
-</h1>
-<script type="text/javascript">
-	function changeMethod(id1,id2){
-		document.getElementById(id1).style.backgroundColor = "lightblue";
-		document.getElementById(id1).innerHTML = document.getElementById(id2).innerHTML;
-		document.getElementById(id1).style.backgroundColor = "lightgreen";
-		document.getElementById(id1).style.color = "red";
-		document.getElementById(id1).style.fontSize = "48pt";
-	}
-</script>
+	<p>
+		This is level 0.
+	</p>
+	<button onclick="increaseCount()">
+		Update
+	</button>
+	<script type="text/javascript">
+		var i = 0;var j = 20;
+		function increaseCount(){
+			i = i+1;
+			var elm = document.querySelector('p');
+			var temp = 'This is level '+i+'.';
+			elm.innerHTML = temp;
+			elm.style.fontSize = j+"px";
+			j = j+10;
+		}
+	</script>
 </body>
 </html>

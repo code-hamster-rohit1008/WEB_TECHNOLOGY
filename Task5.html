@@ -6,27 +6,53 @@
 	<title>
 		Task 5
 	</title>
-	<style type="text/css">
-		h1#first{
-			color: lightblue;
-		}
-	</style>
 </head>
 <body>
-	<h1 style="color: lightpink;">
-		I am Heading for HTML
-	</h1>
-	<h1 id="first">
-		I am Heading for CSS.
-	</h1>
-	<h1 id="second">
-		I am Heading for JS!
-	</h1>
-	<main>
-		I am Main
-	</main>
+	<label for="num1">Number 1: </label>
+	<input type="text" name="number1" id="num1"><br><br>
+	<label for="num2">Number 2: </label>
+	<input type="text" name="number2" id="num2"><br><br>
+	<button id="add" onclick="add()">
+		+
+	</button>
+	<button id="add" onclick="sub()">
+		-
+	</button>
+	<button id="add" onclick="mul()">
+		x
+	</button>
+	<button id="add" onclick="div()">
+		/
+	</button>
 	<script type="text/javascript">
-		document.getElementById('second').style.color = "lightgreen";
+		var inp1 = document.querySelector("#num1");
+		var inp2 = document.querySelector("#num2");
+		var Div = document.createElement("div");
+		document.body.appendChild(Div);
+		function add(){
+			var temp1 = Number.parseInt(inp1.value);
+			var temp2 = Number.parseInt(inp2.value);
+			let res = temp1+temp2;
+			Div.innerText = res;
+		}
+		function sub(){
+			var temp1 = Number.parseInt(inp1.value);
+			var temp2 = Number.parseInt(inp2.value);
+			let res = temp1-temp2;
+			Div.innerHTML = res;
+		}
+		function mul(){
+			var temp1 = Number.parseInt(inp1.value);
+			var temp2 = Number.parseInt(inp2.value);
+			let res = temp1*temp2;
+			Div.innerHTML = res;
+		}
+		function div(){
+			var temp1 = Number.parseInt(inp1.value);
+			var temp2 = Number.parseInt(inp2.value);
+			let res = temp1/temp2;
+			Div.innerHTML = res;
+		}
 	</script>
 </body>
 </html>
